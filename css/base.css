@@ -1,0 +1,1235 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    right: 0%;
+    min-width: 7rem;
+    bottom: 125%;
+    left: 0%;
+    background-color: var(--darkgrey5);
+    border-bottom: 1px solid var(--green);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.notice {
+    display: block;
+    visibility: hidden;
+    background: transparent;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0s ease 0s, background-color 250ms ease 0s;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.notice.active {
+    visibility: visible;
+}
+
+.notice .title {
+    color: rgb(var(--ALPHA));
+    line-height: 1.5em;
+    font-size: 1.25em;
+    text-align: center;
+    padding: 5px 0px 0px;
+    margin: 0.5em 0px 0px;
+}
+
+.notice .countdown {
+    content: " ";
+    display: block;
+    height: 0.5em;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    right: 0px;
+    margin: 0px 10px;
+    background: rgb(var(--ALPHA) / 35%);
+    border-radius: 2.5px;
+    transition: width 1000ms ease 0s;
+}
+
+.notice .text {
+    line-height: 1.25em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em 0px 1em;
+    overflow-wrap: break-word;
+}
+
+.notice .content {
+    box-shadow: rgb(10, 10, 16) 0px 0px 5px, rgb(10, 10, 16) -2.5px -2.5px 5px inset;
+    min-width: 15%;
+    max-width: calc(30% - 30px);
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(5, 5, 20), rgb(18, 19, 31), rgb(5, 5, 20));
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    padding: 0px 10px;
+}
+
+.notice:not(.active) .content,
+.notice:not(.active) * {
+    line-height: 0;
+    font-size: 0px;
+    background: transparent;
+    box-shadow: none;
+    visibility: hidden;
+}
+
+.pw.page {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    padding: 0px;
+}
+
+.pw.messages {
+    display: flex;
+    margin: 1rem 0px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.pw.messages .pw.message {
+    margin: 0px 1rem 1rem;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: calc(50% - 2rem);
+}
+
+.pw.message {
+    font-size: 16px;
+    position: relative;
+    top: 0rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background: rgb(18, 19, 31);
+    transition: all 0.2s ease 0s;
+}
+.page-content div[id^="DIV-"].pw.message.combat {
+    background: transparent;
+    padding: 0 10px;
+}
+
+.full-width {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.pw.message:last-child {
+    margin-bottom: 0px;
+}
+
+.pw.message:not(.no-animation):hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(255, 255, 255, 0.05) 2.5px 2.5px 5px 0px;
+}
+
+.pw.message .content {
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-weight: 300;
+}
+
+.pw.messages:last-child {
+    margin-bottom: 0px;
+}
+
+.pw.image {
+    position: relative;
+    display: block;
+    border-radius: 5px;
+    margin: 0.5rem;
+    max-width: 100%;
+    background-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pw.round.image {
+    border-radius: 50%;
+}
+
+.pw.mini.image,
+.pw.mini.images .image,
+.pw.mini.images img {
+    width: 35px;
+    height: auto;
+}
+
+.pw.tiny.image,
+.pw.tiny.images .image,
+.pw.tiny.images img {
+    width: 80px;
+    height: auto;
+}
+
+.pw.small.image,
+.pw.small.images .image,
+.pw.small.images img {
+    width: 150px;
+    height: auto;
+}
+
+.pw.medium.image,
+.pw.medium.images .image,
+.pw.medium.images img {
+    width: 250px;
+    height: auto;
+}
+
+.pw.wide.image,
+.pw.wide.images .image,
+.pw.wide.images img {
+    width: 350px;
+    height: auto;
+}
+
+.pw.large.image,
+.pw.large.images .image,
+.pw.large.images img {
+    width: 450px;
+    height: auto;
+}
+
+.pw.big.image,
+.pw.big.images .image,
+.pw.big.images img {
+    width: 600px;
+    height: auto;
+}
+
+.pw.huge.image,
+.pw.huge.images .image,
+.pw.huge.images img {
+    width: 800px;
+    height: auto;
+}
+
+.pw.massive.image,
+.pw.massive.images .image,
+.pw.massive.images img {
+    width: 960px;
+    height: auto;
+}
+
+.pw.centered.image,
+.pw.centered.images {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+}
+
+.pw.images .image,
+.pw.images>img {
+    display: inline-block;
+    margin: 0px 0.25rem 0.5rem;
+}
+
+.link {
+    display: inline-block;
+    color: rgb(var(--ALPHA));
+    padding: 0px;
+    transition: all 0.25s ease-in-out 0s;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.link:hover {
+    background-color: rgb(var(--ALPHA));
+    color: white;
+    border-radius: 2.5px;
+    padding: 0.25rem 0.5rem;
+}
+
+.pw.divider {
+    font-size: 1rem;
+    margin: 1rem 0px;
+    line-height: 1;
+    height: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.85);
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pw.divider:not(.horizontal):not(.vertical):not(.invisible) {
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, rgba(140, 140, 140, 0.5), transparent);
+}
+
+.pw.invisible.divider {
+    margin: 0.5em 0px;
+    height: 0px;
+    background: none transparent;
+}
+
+.pw.vertical.divider {
+    display: inline-block;
+    background-image: linear-gradient(transparent, rgba(140, 140, 140, 0.5), transparent);
+    margin: 0px 0.5rem -2.5px;
+    height: 1rem;
+    width: 2px;
+}
+
+.pw.horizontal.divider {
+    display: table;
+    white-space: nowrap;
+    height: auto;
+    margin: 2px 0px;
+    text-align: center;
+}
+
+.pw.horizontal.divider::after,
+.pw.horizontal.divider::before {
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 0px;
+    width: 50%;
+    background-size: auto 2px;
+    background-repeat: no-repeat;
+}
+
+.pw.horizontal.divider::before {
+    background-position: right 0.5em top 50%;
+    background-image: linear-gradient(to right, transparent, rgba(140, 140, 140, 0.5));
+}
+
+.pw.horizontal.divider::after {
+    background-position: left 0.5em top 50%;
+    background-image: linear-gradient(to right, rgba(140, 140, 140, 0.5), transparent);
+}
+
+.pw.red {
+    color: rgb(var(--red));
+}
+
+.pw.orange {
+    color: rgb(var(--orange));
+}
+
+.pw.green {
+    color: rgb(var(--green));
+}
+
+.pw.blue {
+    color: rgb(var(--blue));
+}
+
+.pw.yellow {
+    color: rgb(var(--yellow));
+}
+
+.pw.purple {
+    color: rgb(var(--purple));
+}
+
+.pw.white {
+    color: rgb(var(--white));
+}
+
+.pw.black {
+    color: rgb(var(--black));
+}
+
+.pw.grey {
+    color: rgb(var(--grey));
+}
+
+.pw.darkgrey {
+    color: rgb(var(--darkgrey));
+}
+
+.pw.alpha {
+    color: rgb(var(--ALPHA));
+}
+
+.message span.pw {
+    text-shadow: 0px 0px 5px;
+}
+
+.message span.pw.white {
+    text-shadow: black 0px 0px 2.5px;
+}
+
+.pw.message.selected,
+.pw.message.selected:hover {
+    box-shadow: 0 0 5px 0 rgb(var(--ALPHA)), inset 0 0 2.5px 0 rgb(var(--ALPHA));
+}
+
+.pw.segments {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem 0px;
+    border-radius: 0.1px;
+}
+
+.pw.segments:last-child {
+    margin-bottom: 0px;
+}
+
+.pw.horizontal.segments {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0.5rem 0px;
+    border-radius: 0.1px;
+}
+
+.pw.segment {
+    position: relative;
+    margin: 1rem 0px;
+    padding: 1em;
+    border-radius: 0.1px;
+}
+
+.pw.segments>.segment {
+    border-radius: 0px;
+    margin: 0px;
+    width: auto;
+}
+
+.pw.segments>.segment.content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 5px 10px;
+}
+
+.pw.horizontal.segments>.segment {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    margin: 0px;
+    min-width: 0px;
+    border-radius: 0px;
+}
+
+.pw.horizontal.segments>.segment:first-child {
+    border-left: none;
+}
+
+.pw.horizontal.dark.segments.header-segment>.segment {
+    display: flex;
+    height: 2.5em;
+    line-height: 16px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#namestat {
+    display: inline-flex;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pw.button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    min-height: 1em;
+    font-size: 18px;
+    border: none;
+    color: white;
+    vertical-align: baseline;
+    background: none rgba(255, 255, 255, 0);
+    margin: 0px 0.25em 0px 0px;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-transform: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.25s ease-in-out 0s, font-size 0s ease 0s;
+}
+
+.pw.button:not(.transparent):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(var(--ALPHA));
+    cursor: pointer;
+}
+
+.pw.buttons {
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    font-size: 0px;
+    vertical-align: baseline;
+    margin: 0px 0.25em 0px 0px;
+}
+
+.pw.buttons .pw.button {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.pw.buttons:not(.nostack) .pw.button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pw.buttons:not(.nostack) .pw.button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pw.nostack.buttons .pw.button:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+.pw.buttons>.pw.button[style="display: none;"]+.pw.button,
+.pw.nostack.buttons .pw.button {
+    border-radius: 5px;
+}
+
+.pw.fluid.buttons {
+    width: 100%;
+}
+
+.pw.fluid.vertical.buttons {
+    display: block;
+}
+
+.pw.fluid.vertical.buttons>.pw.button {
+    display: block;
+    margin: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.pw.fluid.button {
+    display: block;
+    margin: 2.5px 0px 0px;
+}
+
+.pw.blue.button {
+    background-color: rgb(var(--blue));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.blue.button:not(.transparent):hover {
+    background-color: rgb(var(--blue) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.red.button {
+    background-color: rgb(var(--red));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.red.button:not(.transparent):hover {
+    background-color: rgb(var(--red) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.green.button {
+    background-color: rgb(var(--green));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.green.button:not(.transparent):hover {
+    background-color: rgb(var(--green) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.yellow.button {
+    background-color: rgb(var(--yellow));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.yellow.button:not(.transparent):hover {
+    background-color: rgb(var(--yellow) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.purple.button {
+    background-color: rgb(var(--purple));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.purple.button:not(.transparent):hover {
+    background-color: rgb(var(--purple) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.grey.button {
+    background-color: rgb(var(--grey));
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+}
+
+.pw.grey.button:not(.transparent):hover {
+    background-color: rgb(var(--grey) / 75%);
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.pw.darkgrey.button {
+    background-color: rgb(var(--darkgrey));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.darkgrey.button:not(.transparent):hover {
+    background-color: rgb(var(--darkgrey) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.alpha.button {
+    background-color: rgb(var(--ALPHA));
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+}
+
+.pw.alpha.button:not(.transparent):hover {
+    background-color: rgb(var(--ALPHA) / 75%);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.pw.button.disabled {
+    max-width: 0px;
+    font-size: 0px;
+}
+
+.pw.button.transparent {
+    opacity: 0.5;
+}
+
+.pw.buttons .pw.button.active {
+    background-color: rgba(125, 125, 155, 0.25);
+}
+
+.pw.buttons .pw.button.active>i {
+    color: rgb(var(--ALPHA));
+}
+
+.pw.buttons .pw.button.active::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    background: rgb(var(--ALPHA));
+    box-shadow: 0 0 5px rgb(var(--ALPHA));
+    height: 2px;
+    width: 100%;
+}
+
+.pw.progress {
+    background: rgb(18, 19, 31);
+    position: relative;
+    display: flex;
+    height: 0.5rem;
+    border-radius: 2.5px;
+}
+
+.pw.progress .progress-bar {
+    z-index: 1;
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    background-color: rgb(var(--ALPHA));
+    border-radius: 2.5px;
+}
+
+.pw.progress .progress-text {
+    position: relative;
+    z-index: 2;
+    bottom: 1.25rem;
+    text-align: center;
+    width: 100%;
+}
+
+.popup {
+    display: flex;
+    visibility: hidden;
+    z-index: 100;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0s ease 0s, background-color 250ms ease 0s;
+    -webkit-user-select: none;
+    user-select: none;
+    top: 0px !important;
+    left: 0px !important;
+}
+
+.popup.active {
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.popup>.content>.title {
+    color: rgb(var(--ALPHA));
+    line-height: 1.5em;
+    font-size: 1.25em;
+    text-align: center;
+    padding: 1em 0px 0.5em;
+}
+
+.popup .text {
+    line-height: 1.25em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em 0px 1em;
+}
+
+.popup>.content {
+    display: block;
+    width: 75%;
+    text-align: center;
+    border-radius: 5px;
+    background: rgb(18, 19, 31);
+    box-shadow: rgb(31, 32, 39) 0px 0px 5px, rgb(23, 24, 41) 2.5px 2.5px 10px;
+}
+
+.popup:not(.active) .content,
+.popup:not(.active) * {
+    line-height: 0;
+    font-size: 0px;
+    background: transparent;
+    box-shadow: none;
+    visibility: hidden;
+}
+
+.pw.fluid.steps {
+    display: flex;
+    margin: 0.25em 0px;
+    width: 100%;
+}
+
+.ui.steps {
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    margin: 1em 0px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.pw.steps .step {
+    position: relative;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    vertical-align: middle;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 1.15em 2em;
+    font-size: 1rem;
+    background: rgb(28, 29, 41);
+    transition: background-color 0.1s ease 0s, opacity 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s;
+}
+
+.pw.steps .step:first-child {
+    padding-left: 2em;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.pw.steps .step:last-child {
+    padding-right: 2em;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.pw.steps .step>i {
+    line-height: 1;
+    font-size: 2.5em;
+    margin: 0px 1rem 0px 0px;
+}
+
+.pw.steps .step .title {
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.pw.steps .step .description {
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+.pw.steps .step.active,
+.pw.steps .step.active::after {
+    background: rgb(42, 43, 60);
+    text-shadow: black 0px 0px 5px;
+}
+
+.pw.steps .step.completed {
+    background: rgb(32, 33, 51);
+    text-shadow: black 0px 0px 5px;
+}
+
+.pw.steps .step::after {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    top: 50%;
+    right: 0px;
+    border: medium none;
+    background-color: rgb(255, 255, 255);
+    width: 1.15em;
+    height: 1.15em;
+    transition: background-color 0.1s ease 0s, opacity 0.1s ease 0s, color 0.1s ease 0s, box-shadow 0.1s ease 0s, -webkit-box-shadow 0.1s ease 0s;
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+}
+
+.pw.steps .active.step::after {
+    display: block;
+}
+
+.pw.steps .step.completed .title {
+    color: rgb(var(--ALPHA));
+}
+
+.pw.steps .step.completed>i::before {
+    color: rgb(var(--ALPHA));
+    content: "";
+}
+
+.pw.sticked.segments {
+    margin-bottom: 0px;
+}
+
+.pw.sticked.segments .segment {
+    margin: 5px 5px 0px;
+    padding: 0px;
+    line-height: 1.5em;
+    border-radius: 5px;
+    background-color: rgba(18, 19, 31, 0);
+}
+
+.pw.label {
+    display: block;
+    margin: 0.25em 0px;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pw.inline.label {
+    display: inline-block;
+    margin: 5px 2.5px;
+    padding: 5px 2.5px;
+}
+
+.pw.inline.label:not(:first-child):not(:last-child) {
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+}
+
+.pw.dropdown>.name::before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    line-height: 1;
+    content: "";
+    margin-right: 5px;
+    transition: all 250ms linear 0s;
+}
+
+.pw.dropdown>.name {
+    margin: 0.5em 0px 0px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pw.dropdown:hover>.name {
+    color: rgb(var(--ALPHA));
+}
+
+.pw.dropdown[data-open="open"]>.name::before {
+    color: rgb(var(--ALPHA));
+    content: "";
+}
+
+.pw.dropdown>.content {
+    display: none;
+}
+
+.pw.dropdown[data-open="open"]>.content {
+    position: relative;
+    display: block;
+}
+
+.pw.segment.light,
+.pw.segments.light,
+.pw.segment.dark,
+.pw.segments.dark,
+.pw.segment.active,
+.pw.segments.active {
+    color: white;
+    border-radius: 5px;
+    margin: 0 0.5em;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.pw.segment.dark:hover,
+.pw.segments.dark:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.pw.segment.active,
+.pw.segments.active {
+    background-color: rgb(var(--green) / 5%);
+}
+
+.pw.segment.active:hover,
+.pw.segments.active:hover {
+    background-color: rgb(var(--green) / 10%);
+}
+
+.pw.segment.light,
+.pw.segments.light {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pw.segment.light:hover,
+.pw.segments.light:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pw.horizontal.dark.segments>.segment,
+.pw.horizontal.segments>.segment.dark,
+.pw.horizontal.light.segments>.segment,
+.pw.horizontal.segments>.segment.light {
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    white-space: nowrap;
+    height: auto;
+    padding: 0.5em 1em;
+}
+
+.pw.segment>h1,
+.pw.segment>h2,
+.pw.segment>h3,
+.pw.segment>h4,
+.pw.segment>h5,
+.pw.segment>h6 {
+    margin: 0px;
+    line-height: 1.5;
+}
+
+.pw.segment.avatar {
+    display: flex;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    justify-content: flex-start !important;
+    align-content: center;
+    align-items: center;
+}
+
+.pw.segment.avatar img {
+    height: 2.5em;
+    width: 2.5em;
+    margin: auto 1em;
+}
+
+.pw.segment.avatar img+span {
+    margin: auto 1em auto 0em;
+}
+
+.pw.checkbox {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    min-height: 1em;
+    font-size: 18px;
+    border: none;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+    padding: 0.5em 1em 0.5em 45px;
+    border-radius: 5px;
+    text-transform: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.25s ease-in-out 0s, font-size 0s ease 0s;
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0.5em;
+}
+
+.pw.checkbox.dark {
+    background-color: rgba(42, 43, 58, 0.3);
+    color: white;
+}
+
+.pw.checkbox>input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    appearance: none;
+    margin: auto 0px;
+    width: 40px;
+    line-height: 18px;
+    color: white;
+    border-radius: 2.5px;
+    background: rgb(var(--grey));
+    outline: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.pw.checkbox>.text {
+    line-height: 18px;
+    font-size: 16px;
+    margin: 0px 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.pw.checkbox>.text2 {
+    background: rgba(0, 0, 0, 0.25);
+    line-height: 18px;
+    font-size: 16px;
+    margin: 0px 5px 0px 0px;
+    padding: 0px 5px;
+    border-radius: 0px 5px 5px 0px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.pw.checkbox[data-check="checked"]>input {
+    background: rgb(var(--ALPHA));
+    transition: all 500ms linear 0s;
+}
+
+.pw.checkbox:not([data-check="checked"])>input::after {
+    content: "✖";
+    font-size: 18px;
+}
+
+.pw.checkbox[data-check="checked"]>input::after {
+    display: block;
+    content: "✔";
+    font-size: 18px;
+    text-align: center;
+}
+
+.pw.label.green,
+.pw.segments .pw.segment.green {
+    background-color: rgb(var(--green) / 15%);
+}
+
+.pw.label.red,
+.pw.segments .pw.segment.red {
+    background-color: rgb(var(--red) / 15%);
+}
+
+.pw.label.yellow,
+.pw.segments .pw.segment.yellow {
+    background-color: rgb(var(--yellow) / 15%);
+}
+
+.pw.label.purple,
+.pw.segments .pw.segment.purple {
+    background-color: rgb(var(--purple) / 15%);
+}
+
+.pw.label.orange,
+.pw.segments .pw.segment.orange {
+    background-color: rgb(var(--orange) / 15%);
+}
+
+.pw.label.blue,
+.pw.segments .pw.segment.blue {
+    background-color: rgb(var(--blue) / 15%);
+}
+
+.pw.label.white,
+.pw.segments .pw.segment.white {
+    background-color: rgb(var(--white) / 15%);
+}
+
+.pw.label.black,
+.pw.segments .pw.segment.black {
+    background-color: rgb(var(--black) / 15%);
+}
+
+.pw.label.alpha,
+.pw.segments .pw.segment.alpha {
+    background-color: rgb(var(--ALPHA) / 15%);
+}
+
+.pw.label>h1,
+.pw.label>h2,
+.pw.label>h3,
+.pw.label>h4,
+.pw.label>h5,
+.pw.label>h6 {
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+}
+
+.pw.reddit {
+    color: rgb(222, 61, 61);
+}
+
+.pw.discord {
+    color: rgb(114, 137, 218);
+}
+
+.pw.message.item>.pw.segments,
+.pw.message.item>.pw.segments>.pw.little.segment>.pw.button {
+    margin: 0px;
+}
+
+.pw.button-container {
+    display: inline-block;
+    min-width: 3em;
+    justify-content: center;
+    align-self: center;
+    max-width: 3em;
+    padding: initial;
+}
+
+.pw.button-container:first-child {
+    margin-right: auto;
+}
+
+.pw.button-container:last-child {
+    margin-left: auto;
+}
+
+.pw.vertical.buttons {
+    display: inline-block;
+}
+
+.pw.vertical.buttons>.pw.button {
+    display: block;
+}
+
+.pw.vertical.buttons .pw.button:first-child {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.pw.vertical.buttons .pw.button:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+@media (min-width: 1024px) {
+    .pw.messages .pw.message:nth-child(2n) {
+        margin-left: 0px;
+    }
+
+    .equipment>.pw.horizontal.segments>.segment:first-child {
+        max-width: calc(50% - 1em);
+        min-width: calc(50% - 1em);
+    }
+
+    .equipment>.pw.horizontal.segments>.segment {
+        min-width: calc(50% - 1em);
+    }
+}
+
+@media (max-width: 1024px) {
+    .pw.messages .pw.message {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .pw.messages .pw.message:last-child {
+        margin-bottom: 0px;
+    }
+
+    .pw.images {
+        flex-wrap: wrap;
+    }
+
+    .pw.fluid.nostack.buttons {
+        width: 100%;
+        display: block;
+    }
+
+    .pw.nostack.buttons .pw.button {
+        display: block;
+        margin: 0px 0px 0.5em !important;
+    }
+
+    .pw.nostack.buttons .pw.button.disabled {
+        margin: 0px !important;
+        display: none !important;
+    }
+
+    .pw.fluid.steps {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pw.steps .step,
+    .pw.fluid.steps .step {
+        margin: 5px;
+        width: calc(100% - 5em);
+        border-radius: 5px !important;
+    }
+}
+
+.pw.subtitle {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    line-height: 1em;
+    padding-bottom: 2.5px;
+}
+
+.pw.nostack.buttons .pw.button {
+    font-size: 1rem;
+    padding: 0.75em 1em;
+}
+
+.pw.horizontal.segments.dark:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.pw.horizontal.segments.dark:first-child {
+    margin-top: 0.5em;
+}
+
+.pw.horizontal.segments.dark:last-child {
+    margin-bottom: 0.5em;
+}
