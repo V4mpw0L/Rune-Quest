@@ -9,6 +9,7 @@ body {
 
 h1 {
     text-align: center;
+    color: rgb(184, 183, 183);
 }
 
 #topBar {
@@ -16,7 +17,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #444;
+    background-color: #3f3f3f;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
@@ -26,6 +27,30 @@ h1 {
     align-items: center;
 }
 
+#profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#playerName {
+    text-align: center;
+    width: 64px;
+    margin-top: 3px;
+    background-image: linear-gradient(to right, rgb(6, 251, 251), rgb(255, 255, 255), rgb(0, 255, 242), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adicione esta linha */
+    font-weight: bold; /* Adicione esta linha */
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(238, 235, 235, 0.5);
+    box-shadow: 2px 2px rgba(0,0,0,0.5); /* Adicione esta linha */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+
+
+}
+
 #profilePic {
     width: 64px;
     height: 64px;
@@ -33,7 +58,8 @@ h1 {
     object-fit: contain;
     box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px rgba(238, 235, 235, 0.5);
-
+    box-shadow: 2px 2px rgba(0,0,0,0.5); /* Adicione esta linha */
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 #sidebar {
@@ -60,7 +86,6 @@ h1 {
 }
 
 button {
-    
     padding: 5px 5px;
     margin: 10px;
     border-radius: 8px;
@@ -70,7 +95,8 @@ button {
     color: #d8d7d7;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
     font-weight: bold;
- }
+}
+
  
  
 
@@ -94,28 +120,4 @@ button {
    body {
        font-size: 16px;
    }
-}
-
-footer {
-    text-align: center;
-	box-shadow: 0px 2px 5px rgba(0,0,0,0.5); /* Add shadow */
-    margin: 20px;
-    margin-top: 570px;
-	border-radius: 10px;
-    margin-bottom: 50px; /* Change this value as needed */
-}
-footer ul {
-   background-image: linear-gradient(to bottom, #FFD700, white, black);
-    border-radius: 10px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: #222;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px;    ; /* Add shadow */
-}
-footer li {
-    display: inline-block;
-    margin: 0 10px;
-	box-shadow: 0px 2px 5px rgba(0,0,0,0.5); /* Add shadow */
 }
