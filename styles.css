@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+}
+
+#profilePic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding: 10px;
+    background-color: #444;
+}
+
+#skillsMenu {
+   position: relative;
+}
+
+#skillOptions {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+   border-radius: 5px;
+}
+
+button {
+   padding: 10px 20px;
+   margin: 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   background-color: #666;
+   color: #fff;
+}
+
+.hidden {
+   display: none;
+}
+
+.clicked {
+   background-color: #999 !important;
+}
+
+/* CSS for larger screens */
+@media (min-width: 600px) {
+   body {
+       font-size: 18px;
+   }
+}
+
+/* CSS for smaller screens */
+@media (max-width: 599px) {
+   body {
+       font-size: 16px;
+   }
+}
+
+footer {
+    text-align: center;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.5); /* Add shadow */
+    margin: 20px;
+    margin-top: 570px;
+	border-radius: 10px;
+    margin-bottom: 50px; /* Change this value as needed */
+}
+footer ul {
+   background-image: linear-gradient(to bottom, #FFD700, white, black);
+    border-radius: 10px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #222;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;    ; /* Add shadow */
+}
+footer li {
+    display: inline-block;
+    margin: 0 10px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.5); /* Add shadow */
+}
