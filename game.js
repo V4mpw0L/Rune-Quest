@@ -46,6 +46,16 @@ document.getElementById('combatMenu').addEventListener('click', function() {
     console.log('Você está em combate!');
 });
 
+document.getElementById('inventoryMenu').addEventListener('click', function() {
+
+    console.log('Seu Inventory!');
+
+});
+
+document.getElementById('profileMenu').addEventListener('click', function() {
+    console.log('Seu Perfil!');
+});
+
 document.addEventListener('click', function() {
     var menu = document.getElementById('skillOptions');
     if (!menu.classList.contains('hidden')) {
