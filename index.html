@@ -8,17 +8,17 @@
 </head>
 <body>
     <h1>Rune Quest!</h1>
-    <div id="topBar">
-        <div id="profile">
-            <div id="profileInfo">
-                <img id="profilePic" src="./img/profile1.png" alt="Foto do perfil">
-                <div id="playerName">Player</div>
-            </div>
-            <button id="profileBtn"><img src="./img/profile_icon.png" alt="Perfil">Profile</button>
+<div id="topBar">
+    <div id="profile">
+        <div id="profileInfo">
+            <img id="profilePic" src="./img/profile1.png" alt="Foto do perfil">
+            <div id="playerName">Player</div>
         </div>
-                <button id="inventoryMenu"><img src="./img/inventory.png" alt="Inventory">Inventory</button>
+    </div>
+    <div id="buttons">
+        <button id="profileBtn"><img src="./img/profile_icon.png" alt="Perfil">Profile</button>
+        <button id="inventoryMenu"><img src="./img/inventory.png" alt="Inventory">Inventory</button>
         <div id="skillsMenu">
-          
             <button id="skills"><img src="./img/skills_icon.png" alt="Skills">Skills</button>
             <div id="skillOptions" class="hidden">
                 <button id="fishing"><img src="./img/Fishing.png" alt="Pescar">Pescar</button>
@@ -28,6 +28,9 @@
         </div>
         <button id="combatMenu"><img src="./img/combat_icon.png" alt="Combate">Combat!</button>
     </div>
+</div>
+
+
     <div id="game"></div>
     <script src="game.js"></script>
 </body>
