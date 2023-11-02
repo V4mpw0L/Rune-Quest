@@ -1,5 +1,4 @@
 var skillButtons = document.querySelectorAll('#skillOptions button');
-
 document.getElementById('skills').addEventListener('click', function(event) {
     event.stopPropagation();
     var menu = document.getElementById('skillOptions');
@@ -10,49 +9,42 @@ document.getElementById('skills').addEventListener('click', function(event) {
         menu.classList.add('hidden');
         this.classList.remove('clicked');
         skillButtons.forEach(function(button) {
-            button.classList.remove('clicked'); // Remove a classe 'clicked' de todos os botões quando o menu é fechado
+            button.classList.remove('clicked');
         });
     }
 });
-
 document.getElementById('fishing').addEventListener('click', function(event) {
     event.stopPropagation();
     skillButtons.forEach(function(button) {
-        button.classList.remove('clicked'); // Remove a classe 'clicked' de todos os botões
+        button.classList.remove('clicked');
     });
-    this.classList.add('clicked'); // Adiciona a classe 'clicked' ao botão clicado
+    this.classList.add('clicked');
     console.log('Você está pescando!');
 });
-
 document.getElementById('mining').addEventListener('click', function(event) {
     event.stopPropagation();
     skillButtons.forEach(function(button) {
-        button.classList.remove('clicked'); // Remove a classe 'clicked' de todos os botões
+        button.classList.remove('clicked');
     });
-    this.classList.add('clicked'); // Adiciona a classe 'clicked' ao botão clicado
+    this.classList.add('clicked');
     console.log('Você está minerando!');
 });
-
 document.getElementById('crafting').addEventListener('click', function(event) {
     event.stopPropagation();
     skillButtons.forEach(function(button) {
-        button.classList.remove('clicked'); // Remove a classe 'clicked' de todos os botões
+        button.classList.remove('clicked');
     });
-    this.classList.add('clicked'); // Adiciona a classe 'clicked' ao botão clicado
+    this.classList.add('clicked');
     console.log('Você está fazendo crafting!');
 });
-
 document.getElementById('combatMenu').addEventListener('click', function() {
     console.log('Você está em combate!');
 });
-
 document.getElementById('inventoryMenu').addEventListener('click', function() {
-
     console.log('Seu Inventory!');
-
 });
 
-document.getElementById('profileMenu').addEventListener('click', function() {
+document.getElementById('profileBtn').addEventListener('click', function() {
     console.log('Seu Perfil!');
 });
 
@@ -62,7 +54,7 @@ document.addEventListener('click', function() {
         menu.classList.add('hidden');
         document.getElementById('skills').classList.remove('clicked');
         skillButtons.forEach(function(button) {
-            button.classList.remove('clicked'); // Remove a classe 'clicked' de todos os botões quando o documento é clicado
+            button.classList.remove('clicked');
         });
     }
 });
