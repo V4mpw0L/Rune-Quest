@@ -5,33 +5,31 @@ body {
     background-repeat: no-repeat;
     color: #fff;
     height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
     text-align: center;
     color: rgb(184, 183, 183);
 }
-
 #topBar{
-
-    
+    box-sizing: border-box;
 }
-
 #bottomBar {
     box-sizing: border-box;
     padding: 30px 30px;
     width: 90%;
     margin: -5px;
+    
 }
-
 #messageBox {
-    background-color: #222;
-	padding: 10px;
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 10px;
 	overflow-y: scroll;
 	height: 200px;
     border-radius: 10px;
     margin: 20px;
-    font-size: 14px;
+    font-size: 15px;
 	box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
     text-shadow: 1px 1px 2px #000;
     margin-bottom: 20px;
@@ -40,14 +38,12 @@ h1 {
     font-weight: bold;
     margin: 10px auto;
 }
-
-
-
 #gameContent {
-    min-height: 200px;
+    min-height: 350px;
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 10px;
+
 }
-
-
 #buttons{
     display: flex;
     justify-content: center;
@@ -59,10 +55,7 @@ h1 {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     background-color: rgba(46, 46, 46, 0.8);
     
-
-
 }
-
 #buttonsBottom {
     display: flex;
     justify-content: center;
@@ -72,10 +65,8 @@ h1 {
     background-color: #2e2e2e;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    background-color: rgba(46, 46, 46, 0.8);
-    
+    background-color: rgba(46, 46, 46, 0.8);   
 }
-
 button {
     align-items: center;
     justify-content: center;
@@ -86,64 +77,56 @@ button {
     border: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background-color: #504f4f;
-    color: #c7c4c4;
+    color: #d5d2d2;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
     font-weight: bold;
     width: 50px; 
     height: 50px; 
-    font-size: 10px;
-    
-}
+    font-size: 11px;
+    text-shadow: 1px 1px 2px #000;
 
+}
 .hidden {
    display: none;
 }
-
 .clicked {
    background-color: #999 !important;
 }
-
 @media (min-width: 600px) {
    body {
        font-size: 18px;
    }
 }
-
 @media (max-width: 599px) {
    body {
        font-size: 16px;
    }
 }
-
 #profile {
    margin-right:auto; 
-   
 }
-
 #profileInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 #playerName {
     text-align: center;
     width: 64px;
     margin-top: 3px;
     background-image: linear-gradient(to right, rgb(6, 251, 251), rgb(255, 255, 255), rgb(0, 255, 242), rgb(255, 255, 255));
     -webkit-background-clip: text;
+    background-clip: text; /* Add this line */
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     font-weight: bold;
+    font-size: 18px;
     box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px rgba(238, 235, 235, 0.5);
     box-shadow: 2px 2px rgba(0,0,0,0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    
-
 }
-
 #profilePic {
     width: 64px;
     height: 64px;
@@ -152,14 +135,11 @@ button {
     box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px rgba(238, 235, 235, 0.5);
     box-shadow: 2px 2px rgba(0,0,0,0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    
+    border: 2px solid rgba(255, 255, 255, 0.5);  
 }
-
 #skillsMenu {
    position: relative;
 }
-
 #skillOptions {
    position: absolute;
    top: 100%;
@@ -168,7 +148,6 @@ button {
    padding: 10px;
    border-radius: 5px;
 }
-
 #bottomBar {
    position: fixed;
    bottom: 0;
